@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inkwell</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-panel" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></symbol>
+    <symbol id="icon-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></symbol>
+    <symbol id="icon-save" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z"/><path d="M17 21v-8H7v8M7 3v5h8"/></symbol>
+    <symbol id="icon-save-as" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z"/><path d="M17 21v-8H7v8M7 3v5h8M16 11h5M18.5 8.5v5"/></symbol>
+    <symbol id="icon-undo" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></symbol>
+    <symbol id="icon-redo" viewBox="0 0 24 24"><path d="m15 14 5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h3"/></symbol>
+    <symbol id="icon-bold" viewBox="0 0 24 24"><path d="M7 5h5.5a3.5 3.5 0 0 1 0 7H7Z"/><path d="M7 12h6.5a4 4 0 0 1 0 8H7Z"/></symbol>
+    <symbol id="icon-italic" viewBox="0 0 24 24"><path d="M10 4h8M6 20h8M14 4l-4 16"/></symbol>
+    <symbol id="icon-underline" viewBox="0 0 24 24"><path d="M6 4v8a6 6 0 0 0 12 0V4M5 21h14"/></symbol>
+    <symbol id="icon-list-bullet" viewBox="0 0 24 24"><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/><path d="M8 6h12M8 12h12M8 18h12"/></symbol>
+    <symbol id="icon-list-number" viewBox="0 0 24 24"><path d="M10 6h11M10 12h11M10 18h11M3 5h2v4M3 9h4M3 17h3l-3 3h4"/></symbol>
+    <symbol id="icon-highlight" viewBox="0 0 24 24"><path d="m9 11-6 6v3h3l6-6M9 11l4-4 6 6-4 4M9 11l6 6M4 21h16"/></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4.5 4.5"/></symbol>
+    <symbol id="icon-timer" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></symbol>
+    <symbol id="icon-focus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/></symbol>
+    <symbol id="icon-expand" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="icon-typewriter" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h.01M18 14h.01M9 14h6"/></symbol>
+    <symbol id="icon-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 1 1 5.8 1c0 2-3 2-3 4"/><path d="M12 18h.01"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="icon-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="icon-replace" viewBox="0 0 24 24"><path d="M4 7h13l-3-3M20 17H7l3 3"/></symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4a8.5 8.5 0 1 0 11.5 11.5Z"/></symbol>
+    <symbol id="icon-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+    <symbol id="icon-volume" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9Z"/><path d="M17 8a5 5 0 0 1 0 8M19.5 5.5a9 9 0 0 1 0 13"/></symbol>
+    <symbol id="icon-volume-off" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9Z"/><path d="m17 9 4 6M21 9l-4 6"/></symbol>
+  </svg>
+
+  <div id="app">
+    <header id="toolbar" class="toolbar">
+      <!-- A · application -->
+      <div class="group" role="group" aria-label="Application">
+        <button type="button" class="btn icon" id="sidebar-toggle" aria-label="Toggle sidebar" title="Show / hide sidebar (Ctrl+\)" aria-pressed="true">
+          <svg class="icon"><use href="#icon-panel"></use></svg>
+        </button>
+        <button type="button" class="btn icon" data-action="save" aria-label="Save as Markdown" title="Save as Markdown (Ctrl+S)">
+          <svg class="icon"><use href="#icon-save"></use></svg>
+        </button>
+        <div class="menu-wrap">
+          <button type="button" class="btn menu-trigger" data-menu="file-menu" aria-haspopup="menu" aria-expanded="false" title="File">
+            File <svg class="icon caret"><use href="#icon-chevron"></use></svg>
+          </button>
+          <div class="popover menu" id="file-menu" role="menu" hidden>
+            <button type="button" class="menu-item" role="menuitem" data-action="open"><svg class="icon"><use href="#icon-folder"></use></svg>Open Markdown…<kbd>Ctrl O</kbd></button>
+            <button type="button" class="menu-item" role="menuitem" data-action="save-as"><svg class="icon"><use href="#icon-save-as"></use></svg>Save as…<kbd>Ctrl ⇧ S</kbd></button>
+          </div>
+        </div>
+      </div>
+
+      <span class="divider" aria-hidden="true"></span>
+
+      <!-- B · typography -->
+      <div class="group" role="group" aria-label="Typography">
+        <select id="block-style" class="select" aria-label="Paragraph style" title="Paragraph style">
+          <option value="p">Normal text</option>
+          <option value="h1">Heading 1</option>
+          <option value="h2">Heading 2</option>
+        </select>
+        <select id="font-family" class="select font-select hide-md" aria-label="Font family" title="Font family">
+          <option value="" hidden>Custom</option>
+          <option value="Iowan Old Style" style="font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif">Iowan Old Style</option>
+          <option value="Arial" style="font-family: Arial, Helvetica, sans-serif">Arial</option>
+          <option value="Helvetica" style="font-family: Helvetica, Arial, sans-serif">Helvetica</option>
+          <option value="Times New Roman" style="font-family: 'Times New Roman', Times, serif">Times New Roman</option>
+          <option value="Georgia" style="font-family: Georgia, 'Times New Roman', serif">Georgia</option>
+          <option value="Verdana" style="font-family: Verdana, Geneva, sans-serif">Verdana</option>
+          <option value="Courier New" style="font-family: 'Courier New', Courier, monospace">Courier New</option>
+          <option value="Trebuchet MS" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif">Trebuchet MS</option>
+          <option value="Garamond" style="font-family: Garamond, 'Times New Roman', serif">Garamond</option>
+          <option value="Palatino" style="font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', serif">Palatino</option>
+          <option value="Comic Sans MS" style="font-family: 'Comic Sans MS', 'Comic Sans', cursive">Comic Sans MS</option>
+        </select>
+        <div class="size-box">
+          <button type="button" class="step" id="size-down" aria-label="Decrease font size" title="Decrease font size (Ctrl+-)">−</button>
+          <input id="font-size" type="number" min="8" max="200" step="1" value="18" aria-label="Font size in pixels">
+          <span class="unit" aria-hidden="true">px</span>
+          <button type="button" class="step" id="size-up" aria-label="Increase font size" title="Increase font size (Ctrl+=)">+</button>
+        </div>
+      </div>
+
+      <span class="divider" aria-hidden="true"></span>
+
+      <!-- C · formatting -->
+      <div class="group" role="group" aria-label="Formatting">
+        <span class="hide-sm group">
+          <button type="button" class="btn icon" data-action="undo" aria-label="Undo" title="Undo (Ctrl+Z)">
+            <svg class="icon"><use href="#icon-undo"></use></svg>
+          </button>
+          <button type="button" class="btn icon" data-action="redo" aria-label="Redo" title="Redo (Ctrl+Shift+Z)">
+            <svg class="icon"><use href="#icon-redo"></use></svg>
+          </button>
+          <span class="divider short" aria-hidden="true"></span>
+        </span>
+        <button type="button" class="btn icon" data-cmd="bold" aria-label="Bold" title="Bold (Ctrl+B)">
+          <svg class="icon"><use href="#icon-bold"></use></svg>
+        </button>
+        <button type="button" class="btn icon" data-cmd="italic" aria-label="Italic" title="Italic (Ctrl+I)">
+          <svg class="icon"><use href="#icon-italic"></use></svg>
+        </button>
+        <button type="button" class="btn icon" data-cmd="underline" aria-label="Underline" title="Underline (Ctrl+U)">
+          <svg class="icon"><use href="#icon-underline"></use></svg>
+        </button>
+        <span class="divider short" aria-hidden="true"></span>
+        <button type="button" class="btn icon" data-cmd="insertUnorderedList" aria-label="Bullet list" aria-pressed="false" title="Bullet list (Ctrl+Shift+8)">
+          <svg class="icon"><use href="#icon-list-bullet"></use></svg>
+        </button>
+        <button type="button" class="btn icon" data-cmd="insertOrderedList" aria-label="Numbered list" aria-pressed="false" title="Numbered list (Ctrl+Shift+7)">
+          <svg class="icon"><use href="#icon-list-number"></use></svg>
+        </button>
+        <span class="divider short" aria-hidden="true"></span>
+
+        <div class="split highlight-wrap">
+          <button type="button" class="btn icon split-main" id="highlight-btn" data-cmd="highlight" aria-label="Highlight" aria-pressed="false" title="Highlight (Ctrl+Shift+H)">
+            <svg class="icon"><use href="#icon-highlight"></use></svg>
+          </button>
+          <button type="button" class="btn icon split-caret" id="highlight-picker" aria-label="Highlight colors" title="Highlight colors" aria-expanded="false">
+            <svg class="icon"><use href="#icon-chevron"></use></svg>
+          </button>
+          <div class="popover highlight-popover" id="highlight-popover" hidden>
+            <div class="popover-head">Highlight</div>
+            <div class="swatches" id="highlight-swatches" role="group" aria-label="Highlight colors"></div>
+            <button type="button" class="popover-action" id="highlight-none">No highlight</button>
+          </div>
+        </div>
+
+        <div class="color-wrap">
+          <button type="button" class="btn icon color-button" id="color-button" aria-label="Font color" title="Font color" aria-expanded="false">
+            <svg class="icon color-icon" viewBox="0 0 24 24">
+              <path d="M6 17 10.5 5h3L18 17M8.2 13h7.6"/>
+              <rect id="color-bar" x="4" y="20" width="16" height="3" rx="1.5" fill="currentColor"></rect>
+            </svg>
+          </button>
+          <div class="popover color-popover" id="color-popover" hidden>
+            <div class="popover-head">Text color</div>
+            <button type="button" class="popover-action" id="color-default">
+              <span class="auto-swatch">A</span> Default (auto)
+            </button>
+            <div class="swatches" id="color-swatches" role="group" aria-label="Preset colors"></div>
+            <label class="color-custom">Custom <input id="color-custom" type="color" value="#3b82f6"></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <!-- D · view -->
+      <div class="group tools" role="group" aria-label="View">
+        <button type="button" class="btn icon" data-action="find" aria-label="Find" title="Find (Ctrl+F) / Replace (Ctrl+H)">
+          <svg class="icon"><use href="#icon-search"></use></svg>
+        </button>
+        <button type="button" class="btn icon" id="focus-btn" data-action="focus" aria-label="Distraction-free mode" title="Distraction-free mode (F11)" aria-pressed="false">
+          <svg class="icon"><use href="#icon-focus"></use></svg>
+        </button>
+        <span class="divider short" aria-hidden="true"></span>
+        <div class="theme-switch" role="group" aria-label="Theme">
+          <button type="button" class="btn icon" data-theme-mode="system" aria-label="System theme" title="Theme: System" aria-pressed="true">
+            <svg class="icon"><use href="#icon-monitor"></use></svg>
+          </button>
+          <button type="button" class="btn icon" data-theme-mode="light" aria-label="Light theme" title="Theme: Light" aria-pressed="false">
+            <svg class="icon"><use href="#icon-sun"></use></svg>
+          </button>
+          <button type="button" class="btn icon" data-theme-mode="dark" aria-label="Dark theme" title="Theme: Dark" aria-pressed="false">
+            <svg class="icon"><use href="#icon-moon"></use></svg>
+          </button>
+        </div>
+        <span class="divider short" aria-hidden="true"></span>
+        <div class="menu-wrap">
+          <button type="button" class="btn icon menu-trigger" data-menu="settings-menu" aria-haspopup="menu" aria-expanded="false" aria-label="Settings" title="Settings">
+            <svg class="icon"><use href="#icon-settings"></use></svg>
+          </button>
+          <div class="popover menu right" id="settings-menu" role="menu" hidden>
+            <label class="menu-row">Page width
+              <select id="page-width" class="select page-width-select" aria-label="Page width">
+                <option value="narrow">Narrow</option>
+                <option value="normal" selected>Normal</option>
+                <option value="wide">Wide</option>
+              </select>
+            </label>
+            <div class="menu-sep" role="separator"></div>
+            <button type="button" class="menu-item" role="menuitem" id="typewriter-btn" data-action="typewriter" aria-pressed="false">
+              <svg class="icon"><use href="#icon-typewriter"></use></svg>Typewriter mode<kbd>Ctrl ⇧ T</kbd>
+            </button>
+            <button type="button" class="menu-item" role="menuitem" id="fullscreen-btn" aria-pressed="false">
+              <svg class="icon"><use href="#icon-expand"></use></svg>Full screen
+            </button>
+            <div class="menu-sep" role="separator"></div>
+            <button type="button" class="menu-item" role="menuitem" data-action="shortcuts">
+              <svg class="icon"><use href="#icon-help"></use></svg>Keyboard shortcuts<kbd>Ctrl /</kbd>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="app-body">
+      <aside id="sidebar" class="sidebar" aria-label="Documents">
+        <div class="sidebar-head">
+          <span class="brand">Inkwell</span>
+          <span class="sidebar-note">Local only</span>
+        </div>
+        <div class="sidebar-actions">
+          <button type="button" id="new-tab" class="new-doc" title="New document (Ctrl+T)">
+            <svg class="icon"><use href="#icon-plus"></use></svg>
+            <span>New document</span>
+          </button>
+          <button type="button" id="new-folder" class="new-doc new-folder" title="New folder">
+            <svg class="icon"><use href="#icon-folder"></use></svg>
+            <span>New folder</span>
+          </button>
+        </div>
+        <label class="sidebar-filter-wrap">
+          <span class="sr-only">Filter documents</span>
+          <input id="sidebar-filter" class="sidebar-filter" type="search" placeholder="Filter documents…" autocomplete="off">
+        </label>
+        <nav id="tabs" class="doc-list" role="tree" aria-label="Documents"></nav>
+        <div class="sidebar-foot">Autosaved on this device</div>
+        <div id="sidebar-resizer" class="sidebar-resizer" role="separator" aria-orientation="vertical" aria-label="Resize sidebar" tabindex="0"></div>
+      </aside>
+
+      <main id="workspace" class="workspace"></main>
+    </div>
+
+    <div id="findbar" class="findbar" hidden role="search" aria-label="Find and replace">
+      <div class="find-row">
+        <input id="find-query" type="search" placeholder="Find" autocomplete="off" spellcheck="false" aria-label="Find text">
+        <span id="find-count" class="find-count" aria-live="polite">0 / 0</span>
+        <button type="button" id="find-case" class="icon-btn case-btn" title="Match case" aria-label="Match case" aria-pressed="false">Aa</button>
+        <button type="button" id="find-prev" class="icon-btn" title="Previous match (Shift+Enter)" aria-label="Previous match"><svg class="icon"><use href="#icon-arrow-up"></use></svg></button>
+        <button type="button" id="find-next" class="icon-btn" title="Next match (Enter)" aria-label="Next match"><svg class="icon"><use href="#icon-arrow-down"></use></svg></button>
+        <button type="button" id="find-replace-toggle" class="icon-btn" title="Show replace" aria-label="Show replace" aria-pressed="false"><svg class="icon"><use href="#icon-replace"></use></svg></button>
+        <button type="button" id="find-close" class="icon-btn" title="Close (Esc)" aria-label="Close find"><svg class="icon"><use href="#icon-close"></use></svg></button>
+      </div>
+      <div class="find-row replace-row" id="replace-row" hidden>
+        <input id="find-replace" type="text" placeholder="Replace with" autocomplete="off" spellcheck="false" aria-label="Replace with">
+        <button type="button" id="replace-one" class="btn small">Replace</button>
+        <button type="button" id="replace-all" class="btn small">All</button>
+      </div>
+    </div>
+
+    <footer id="statusbar" class="statusbar">
+      <div id="file-info" class="file-info">Untitled</div>
+      <div class="status-right">
+        <div id="counts" class="counts" aria-live="polite"></div>
+        <span class="status-sep" aria-hidden="true"></span>
+        <button type="button" id="timer-toggle" class="status-chip" aria-expanded="false" title="Timer (Alt+T)">
+          <svg class="icon"><use href="#icon-timer"></use></svg>
+          <span id="timer-chip">15:00</span>
+        </button>
+        <span class="status-sep" aria-hidden="true"></span>
+        <div class="sound" id="sound-control" title="Typewriter sounds">
+          <button type="button" id="mute-btn" class="icon-btn" aria-pressed="false" aria-label="Mute key sounds" title="Mute key sounds (Ctrl+Shift+M)"></button>
+          <input id="volume" type="range" min="0" max="100" value="60" aria-label="Typewriter volume">
+        </div>
+      </div>
+
+      <div id="timer-panel" class="timer-panel" hidden aria-label="Timer">
+        <div class="panel-head">
+          <strong>Timer</strong>
+          <button type="button" id="timer-close" class="icon-btn" aria-label="Close timer" title="Close"><svg class="icon"><use href="#icon-close"></use></svg></button>
+        </div>
+        <div class="timer-config">
+          <label>Mode
+            <select id="timer-mode">
+              <option value="countdown">Countdown</option>
+              <option value="stopwatch">Stopwatch</option>
+            </select>
+          </label>
+          <label id="minutes-label">Minutes
+            <input id="timer-minutes" type="number" min="1" max="600" step="1" value="15">
+          </label>
+          <label class="check">
+            <input id="timer-words" type="checkbox"> Track words written
+          </label>
+        </div>
+        <div class="timer-time" id="timer-display">15:00</div>
+        <div class="timer-actions">
+          <button type="button" id="timer-start" class="btn primary">Start</button>
+          <button type="button" id="timer-finish" class="btn" disabled>Finish</button>
+          <button type="button" id="timer-reset" class="btn">Reset</button>
+        </div>
+        <div class="timer-stats" id="timer-stats" hidden>
+          <span><strong id="stat-words">0</strong> words</span>
+          <span><strong id="stat-elapsed">0:00</strong> elapsed</span>
+          <span><strong id="stat-wpm">0</strong> wpm</span>
+        </div>
+      </div>
+    </footer>
+
+    <div id="selection-bar" class="selection-bar" role="toolbar" aria-label="Selection formatting" hidden>
+      <button type="button" class="btn icon" data-cmd="bold" aria-label="Bold" title="Bold (Ctrl+B)"><svg class="icon"><use href="#icon-bold"></use></svg></button>
+      <button type="button" class="btn icon" data-cmd="italic" aria-label="Italic" title="Italic (Ctrl+I)"><svg class="icon"><use href="#icon-italic"></use></svg></button>
+      <button type="button" class="btn icon" data-cmd="underline" aria-label="Underline" title="Underline (Ctrl+U)"><svg class="icon"><use href="#icon-underline"></use></svg></button>
+      <span class="divider short" aria-hidden="true"></span>
+      <button type="button" class="btn icon" data-cmd="highlight" aria-label="Highlight" title="Highlight (Ctrl+Shift+H)"><svg class="icon"><use href="#icon-highlight"></use></svg></button>
+      <button type="button" class="btn icon" data-cmd="insertUnorderedList" aria-label="Bullet list" title="Bullet list"><svg class="icon"><use href="#icon-list-bullet"></use></svg></button>
+    </div>
+
+    <div id="drop-zone" class="drop-zone" aria-hidden="true">Drop a Markdown file to open it</div>
+  </div>
+
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/extras.js"></script>
+</body>
+</html>

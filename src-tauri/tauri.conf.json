@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Inkwell",
+  "version": "0.1.0",
+  "identifier": "dev.inkwell.editor",
+  "build": {
+    "frontendDist": "../ui"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "Inkwell",
+        "width": 1120,
+        "height": 780,
+        "minWidth": 620,
+        "minHeight": 420,
+        "dragDropEnabled": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["deb", "appimage"],
+    "category": "Productivity",
+    "shortDescription": "A small, fast Markdown writing app",
+    "longDescription": "Inkwell is an offline desktop writing app with rich text, Markdown import and export, typewriter sounds, and distraction-free writing.",
+    "publisher": "Inkwell",
+    "linux": {
+      "deb": {
+        "desktopTemplate": "../packaging/desktop.template"
+      }
+    },
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.png"
+    ]
+  }
+}

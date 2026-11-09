@@ -1,0 +1,24 @@
+{
+  "name": "inkwell",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A small, fast desktop writing app with Markdown import and export.",
+  "scripts": {
+    "build:js": "tsc",
+    "vendor": "node scripts/vendor.mjs",
+    "postinstall": "npm run vendor",
+    "dev": "npm run build:js && tauri dev",
+    "build": "npm run build:js && tauri build",
+    "build:app": "npm run build:js && tauri build --no-bundle",
+    "test": "npm run build:js && node --test tests/",
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.4",
+    "dompurify": "^3.2.6",
+    "jsdom": "^26.1.0",
+    "marked": "^15.0.12",
+    "typescript": "^5.8.3"
+  }
+}

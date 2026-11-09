@@ -1,0 +1,11 @@
+node_modules/
+ui/js/
+ui/vendor/
+src-tauri/target/
+src-tauri/gen/
+dist/
+packaging/src/
+packaging/pkg/
+packaging/*.pkg.tar.zst
+*.log
+.DS_Store

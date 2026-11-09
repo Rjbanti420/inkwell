@@ -1,0 +1,20 @@
+# Maintainer: Inkwell
+pkgname=inkwell-bin
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="A small, fast Markdown writing app"
+arch=('x86_64')
+url=""
+license=('custom')
+depends=('gtk3' 'webkit2gtk-4.1')
+options=('!debug')
+source=()
+sha256sums=()
+
+package() {
+  install -Dm755 "$startdir/../src-tauri/target/release/inkwell" "$pkgdir/usr/bin/inkwell"
+  install -Dm644 "$startdir/../src-tauri/icons/32x32.png" "$pkgdir/usr/share/icons/hicolor/32x32/apps/dev.inkwell.editor.png"
+  install -Dm644 "$startdir/../src-tauri/icons/128x128.png" "$pkgdir/usr/share/icons/hicolor/128x128/apps/dev.inkwell.editor.png"
+  install -Dm644 "$startdir/../src-tauri/icons/128x128@2x.png" "$pkgdir/usr/share/icons/hicolor/256x256/apps/dev.inkwell.editor.png"
+  install -Dm644 "$startdir/dev.inkwell.editor.desktop" "$pkgdir/usr/share/applications/dev.inkwell.editor.desktop"
+}
