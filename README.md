@@ -48,7 +48,7 @@ for other distributions.
 ## Setup, run, build
 
 ```sh
-git clone https://github.com/SirJul1337/inkwell.git
+git clone https://github.com/Rjbanti420/inkwell.git
 cd inkwell
 npm install          # installs dev tools and vendors marked + DOMPurify
 npm run dev          # build TypeScript, then launch the desktop app with hot reload
@@ -268,4 +268,4 @@ modes, Markdown drag-and-drop and export, and session restore.
 
 ## License
 
-MIT. See [LICENSE](LICENSE). Copyright (c) 2026 SirJul1337.
+MIT. See [LICENSE](LICENSE). Copyright (c) 2026 Rjbanti420.
