@@ -41,7 +41,7 @@ build tools.
 - Tauri's Linux prerequisites for your distribution (WebKitGTK 4.1, GTK 3,
   `libappindicator`, `librsvg`, etc.)
 
-On Arch/Omarchy the relevant packages are already present in a normal desktop
+On Arch the relevant packages are already present in a normal desktop
 install. See the [Tauri prerequisites](https://v2.tauri.app/start/prerequisites/)
 for other distributions.
 
@@ -93,7 +93,7 @@ The app's autosaved workspace is kept. Remove it manually with
 `inkwell path/to/note.md` opens that file; the desktop entry uses `%F`, so
 right-clicking one or more `.md` files and choosing Inkwell works.
 
-### Arch/Omarchy package
+### Arch package
 
 After `npm run build`:
 
